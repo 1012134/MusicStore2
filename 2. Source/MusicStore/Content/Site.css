@@ -1,0 +1,149 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: url("images/bg-3.png") fixed no-repeat /*52% -12%*/;
+    background-position: top;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.register-button {
+    color: white !important;
+    font-size: 11px;
+}
+
+    .register-button:hover {
+        text-decoration: underline !important;
+    }
+
+.login-button {
+    color: white !important;
+    font-size: 11px;
+}
+
+    .login-button:hover {
+        text-decoration: underline !important;
+    }
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        text-decoration: underline;
+    }
+
+@media (min-width: 600px) {
+    .bg {
+        background: url("images/bg-nav.png");
+        background-repeat: repeat-x;
+        border-color: #DDDDDD;
+    }
+
+    .no-border {
+        border-color: #A5A5A5;
+    }
+}
+
+.no-border {
+    border-color: #A5A5A5;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-logo {
+    background: url("images/ms-logo.png");
+    width: 200px;
+    height: 48px;
+}
+
+.footer-design {
+    color: white;
+    background: url("images/footer-bg.png") no-repeat right;
+    height: 162px;
+}
+
+.album-title {
+    text-align: center;
+}
+
+.title-center {
+    text-align: center;
+    color: #69004d;
+}
+
+.div-center {
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+.roundedButton {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: #181818;
+    color: rgba(0,0,0,0.4);
+    width: 65px;
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    outline: 0;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.8);
+}
+
+.content-text-center {
+    text-align: center;
+}
+
+th{
+    cursor: pointer;
+    /*background: url("images/sort_both.png") no-repeat right;*/
+}
+

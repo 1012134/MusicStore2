@@ -1,0 +1,119 @@
+﻿@model IEnumerable<MusicStore.Models.Album>
+
+@{
+    ViewBag.Title = "Manage Album";
+}
+<div class="panel panel-primary no-border">
+    <div class="panel-heading bg">
+        BREADCRUMB HERE!
+    </div>
+    <div class="panel-body">
+
+        <h2 class="title-center">@ViewBag.Title</h2>
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table tablesorter" id="manageAlbumTable">
+            <thead>
+                <tr>
+
+                    <th>
+                        #
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Information)
+                    </th>
+                    <th>
+                        Cover
+                    </th>
+                    <th>
+                        Released Date
+                    </th>
+                    <th>
+                        Soldout
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Language)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        Genre
+                    </th>
+                    <th>
+                        Publisher
+                    </th>
+                    <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int counter = 1;
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @counter
+                            </td>
+                            <td>
+                                <a href="~/Album/Details/@Html.DisplayFor(modelItem => item.ID)">@Html.DisplayFor(modelItem => item.Name)</a>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-xs btn-success dropdown-toggle" data-toggle="dropdown">
+                                        View detail <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        @Html.DisplayFor(modelItem => item.Information)
+                                    </ul>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">
+                                        View detail <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <img src="~/Content/images/album/@Html.DisplayFor(modelItem => item.LinkImage)" />
+                                    </ul>
+                                </div>
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ReleaseDate, new { @class = "content-text-center" })
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BuyCounter)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Language)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Genre.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Publisher.Name)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                            </td>
+                        </tr>
+                        counter = counter + 1;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

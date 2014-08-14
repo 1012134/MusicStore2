@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MusicStore.Models.Album>
+@{
+    ViewBag.Title = "Home Page";
+    //List<MusicStore.Models.Genre> listgenre = ViewBag.listGenre.ToList<MusicStore.Models.Genre>();
+}
+
+@Html.Partial("_SliderPartial")
+<div class="row">
+    <div class="col-md-3">
+        @Html.Partial("_LeftPartial")
+    </div>
+    <div class="col-md-9">
+        <div class="panel panel-primary no-border">
+            <div class="panel-heading bg">
+                BREADCRUMB HERE!
+            </div>
+            <div class="panel-body">
+                @foreach (var item in Model)
+                {
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img src="~/Content/images/album/@item.LinkImage" alt="@item.Name">
+                            <div class="caption">
+                                <h3><a href="~/Home/Album?ID=@item.ID">@item.Name</a></h3>
+                                <p>@item.Information</p>
+                                <p><a href="#" class="btn btn-primary" role="button">Buy</a> <a href="#" class="btn btn-default" role="button">Add</a></p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="panel-footer">
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

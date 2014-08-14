@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7579396c78364565a6670bae7929b114" Name="Diagram1">
+        <EntityTypeShape EntityType="MUSIC_STOREModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Album" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.AspNetRole" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.AspNetUserClaim" Width="1.5" PointX="7.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.AspNetUserLogin" Width="1.5" PointX="7.5" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.AspNetUser" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Composer" Width="1.5" PointX="6" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Genre" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Order" Width="1.5" PointX="10.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Order_Album" Width="1.5" PointX="8.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Publisher" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Singer" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.Song" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.sysdiagram" Width="1.5" PointX="2.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MUSIC_STOREModel.UserAccount" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="MUSIC_STOREModel.fk_Album_Genre" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.fk_Album_Publisher" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.FK_Order_Album_Album" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_User_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.FK_Order_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.fk_Song_Composer" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.fk_Song_Genre" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.FK_Order_Album_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.FK_Order_UserAccount" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.fk_Song_Singer" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.Album_Song" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="MUSIC_STOREModel.WishList" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
